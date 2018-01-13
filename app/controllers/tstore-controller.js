@@ -43,7 +43,7 @@ exports.findAll = function(req, res) {
 
 exports.findOne = function(req, res) {
   // Find a single triple with a tripleId
-  //console.log(req.params.tripleId);
+  //taconsole.log(req.params.tripleId);
   Triple.findById(req.params.tripleId, function(err, data) {
     console.log();
     if (err || !data) {
@@ -60,7 +60,7 @@ exports.update = function(req, res) {
   //console.log(req.params.tripleId)
   // Update a triple identified by the tripleId in the request
   Triple.findById(req.params.tripleId, function(err, triple) {
-    if (err) {
+    if (err || !triple) {
       res.status(500).send({
         message: "Could not find a triple with id " + req.params.tripleId
       });

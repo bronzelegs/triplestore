@@ -43,9 +43,10 @@ exports.findAll = function(req, res) {
 
 exports.findOne = function(req, res) {
   // Find a single triple with a tripleId
-  console.log(req.params.tripleId);
+  //console.log(req.params.tripleId);
   Triple.findById(req.params.tripleId, function(err, data) {
-    if (err) {
+    console.log();
+    if (err || !data) {
       res.status(500).send({
         message: "Could not retrieve triple with id " + req.params.tripleId
       });

@@ -1,0 +1,25 @@
+{
+  "name": "tstore",
+  "version": "1.0.0",
+  "description": "simple mongo implementation of a triplestore.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "RestAPI",
+    "MongoDB",
+    "Mongoose",
+    "triples",
+    "triplestore"
+  ],
+  "author": "Terrance Davis",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.6"
+  }
+}

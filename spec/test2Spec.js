@@ -26,18 +26,33 @@ describe("create", function() {
       });
     });
   });
+
   describe("PUT /triples id", function() {
     it("returns status code 200", function(done) {
       request({
         url: base_url + '/' + createdId,
         method: 'PUT',
         json: {
-          subj: 'puttest',
+          subj: 'changed',
           pred: 'test',
           obj: 'testing'
         }
       }, function(error, response, body) {
         console.log("PUT", body);
+        expect(response.statusCode).toBe(200);
+        done();
+      });
+    });
+  });
+
+  describe("GET /triples id", function() {
+    it("returns status code 200", function(done) {
+      request({
+        url: base_url + '/' + createdId,
+        method: 'GET',
+
+      }, function(error, response, body) {
+        console.log("GET", JSON.parse(body));
         expect(response.statusCode).toBe(200);
         done();
       });

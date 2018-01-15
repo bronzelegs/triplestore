@@ -44,14 +44,14 @@ exports.findAll = function(req, res) {
 exports.findOne = function(req, res) {
   // Find a single triple with a tripleId
   //taconsole.log(req.params.tripleId);
-  Triple.findById(req.params.tripleId, function(err, data) {
+  Triple.findById(req.params.tripleId, function(err, triple) {
     console.log();
-    if (err || !data) {
+    if (err || !triple) {
       res.status(500).send({
         message: "Could not retrieve triple with id " + req.params.tripleId
       });
     } else {
-      res.send(data);
+      res.send(triple);
     }
   });
 };

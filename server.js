@@ -5,6 +5,9 @@ let port = 3000;
 
 let mongoose = require('mongoose');
 let assert = require('assert');
+let morgan = require('morgan')
+
+
 
 mongoose.Promise = require('bluebird');
 
@@ -18,6 +21,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }))
 // parse application/json
 app.use(bodyParser.json())
+//logger
+app.use(morgan('combined'))
 
 mongoose.connect(dbConfig.url, {
 	useMongoClient: true

@@ -1,7 +1,6 @@
 let request = require("request");
-//let server = require("../server.js")
-//let base_url = "http://localhost:3000/"
-let base_url = "http://api.bronzelegs.com:5000/"
+let server = require("../server.js")
+let base_url = "http://localhost:3000/"
 
 describe("test welcome message", function() {
   describe("GET /", function() {

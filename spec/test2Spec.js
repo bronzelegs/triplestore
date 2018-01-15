@@ -58,6 +58,7 @@ describe("create", function() {
       });
     });
   });
+
   describe("DELETE /triples id", function() {
     it("returns status code 200", function(done) {
       request({

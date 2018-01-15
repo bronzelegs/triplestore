@@ -1,6 +1,7 @@
 let request = require("request");
 let server = require("../server.js")
 let base_url = "http://localhost:3000/triples"
+//let base_url = "http://api.bronzelegs.com:5000/triples"
 
 describe("get a bunch", function() {
   describe("GET /triples", function() {

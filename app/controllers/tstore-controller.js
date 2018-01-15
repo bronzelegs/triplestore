@@ -101,7 +101,7 @@ exports.delete = function(req, res) {
           message: "triple deleted successfully!"
         })
       } else {
-        res.send({
+        res.status(404).send({
           message: "triple not found " + data.result.n + " were deleted"
         })
       }

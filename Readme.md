@@ -17,7 +17,3 @@ npm test
 ```
 npm start
 ```
-3. Run tests
-```
-npm test
-```

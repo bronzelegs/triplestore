@@ -46,5 +46,5 @@ require('./app/routes/tstore-routes.js')(app);
 
 // listen for requests
 app.listen(port, function(){
-    console.log("Triple Store Srver is listening on port ", port);
+    console.log("Triple Store Server is listening on port ", port);
 });
